@@ -32,7 +32,7 @@ fn show_int(x: i32) {
     // 将 i32 类型的地址转换为 u8 指针
     // mem::size_of::<i32>() 返回 i32 类型的字节大小
     // 此处直接 as *const u8 也可以
-    show_bytes(&x as *const i32 as const u8, mem::size_of::<i32>());
+    show_bytes(&x as *const i32 as BytePointer, mem::size_of::<i32>());
 }
 
 fn main() {
